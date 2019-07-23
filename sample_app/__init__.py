@@ -15,6 +15,7 @@
 from flask import Flask
 from flask_appconfig import AppConfig
 from flask_bootstrap import Bootstrap
+from flask_debug import Debug
 
 from .frontend import frontend
 from .nav import nav
@@ -32,6 +33,8 @@ def create_app(configfile=None):
 
     # Install our Bootstrap extension
     Bootstrap(app)
+
+    Debug(app)
 
     # Our application uses blueprints as well; these go well with the
     # application factory. We already imported the blueprint, now we just need

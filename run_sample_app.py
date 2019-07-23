@@ -8,7 +8,7 @@ import sys
 
 sys.path.append(os.path.dirname(__name__))
 
-from sample_application import create_app
+from sample_app import create_app
 
 # create an app instance
 app = create_app()
